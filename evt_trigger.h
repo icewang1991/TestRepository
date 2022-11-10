@@ -16,7 +16,10 @@ typedef enum{
 	
 void trigger_init(sEvtTrig*trig,uint16_t init_value);
 
-eTrigBool trigger_poll(sEvtTrig*trig,uint16_t value);
+eTrigBool trigger_diff_poll(sEvtTrig*trig,uint16_t cur_value);
+
+eTrigBool trigger_tatget_poll(sEvtTrig*trig,uint16_t target_value,uint16_t cur_value);
+
 
 #endif
 
